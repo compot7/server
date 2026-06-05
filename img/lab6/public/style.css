@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(184, 217, 255, 0.45), transparent 28%),
+        radial-gradient(circle at top right, rgba(255, 215, 179, 0.38), transparent 26%),
+        linear-gradient(180deg, #f4f8fc 0%, #f7fafc 100%);
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+
+.site-header,
+.site-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px 0;
+}
+
+.site-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.site-header__logo {
+    width: 105px;
+}
+
+.site-header__student {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 18px 40px rgba(31, 41, 55, 0.08);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+    margin: 0 0 8px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: clamp(32px, 4vw, 50px);
+}
+
+.links {
+    font-size: 22px;
+    line-height: 1.9;
+}
+
+a {
+    color: #145cb8;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-size: 18px;
+}
+
+.site-footer {
+    padding: 0 20px 24px;
+    font-size: 18px;
+}
