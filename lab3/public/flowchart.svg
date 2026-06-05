@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2600" viewBox="0 0 1600 2600">
+  <style>
+    .bg { fill: #f7fbff; }
+    .terminal { fill: #e1f0ff; stroke: #17324d; stroke-width: 4; }
+    .process { fill: #ffffff; stroke: #17324d; stroke-width: 4; rx: 28; }
+    .decision { fill: #fff4e8; stroke: #17324d; stroke-width: 4; }
+    .io { fill: #ebfff2; stroke: #17324d; stroke-width: 4; }
+    .note { fill: #f4f0ff; stroke: #17324d; stroke-width: 3; rx: 20; }
+    .text { font-family: 'Segoe UI', Arial, sans-serif; fill: #17324d; text-anchor: middle; }
+    .t1 { font-size: 42px; font-weight: 700; }
+    .t2 { font-size: 32px; font-weight: 600; }
+    .t3 { font-size: 28px; }
+    .t4 { font-size: 24px; }
+    .arrow { stroke: #17324d; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    .yesno { font-family: 'Segoe UI', Arial, sans-serif; fill: #17324d; font-size: 24px; font-weight: 700; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 z" fill="#17324d"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="2600"/>
+
+  <ellipse class="terminal" cx="800" cy="95" rx="190" ry="58"/>
+  <text class="text t1" x="800" y="108">Начало</text>
+
+  <line class="arrow" x1="800" y1="153" x2="800" y2="240"/>
+
+  <rect class="io" x="480" y="240" width="640" height="130" rx="30"/>
+  <text class="text t2" x="800" y="295">Ввод уравнения</text>
+  <text class="text t3" x="800" y="338">27 - x = 17</text>
+
+  <line class="arrow" x1="800" y1="370" x2="800" y2="470"/>
+
+  <rect class="process" x="390" y="470" width="820" height="150"/>
+  <text class="text t2" x="800" y="530">Подготовка строки</text>
+  <text class="text t3" x="800" y="575">Удалить пробелы, разделить уравнение по знаку "="</text>
+
+  <line class="arrow" x1="800" y1="620" x2="800" y2="710"/>
+
+  <polygon class="decision" points="800,710 1035,830 800,950 565,830"/>
+  <text class="text t3" x="800" y="820">Знак "=" найден</text>
+  <text class="text t3" x="800" y="860">ровно один раз?</text>
+
+  <line class="arrow" x1="1035" y1="830" x2="1320" y2="830"/>
+  <text class="yesno" x="1088" y="812">Нет</text>
+  <rect class="note" x="1320" y="760" width="220" height="140"/>
+  <text class="text t4" x="1430" y="820">Ошибка формата</text>
+  <text class="text t4" x="1430" y="855">уравнения</text>
+  <line class="arrow" x1="1430" y1="900" x2="1430" y2="980"/>
+  <ellipse class="terminal" cx="1430" cy="1035" rx="130" ry="42"/>
+  <text class="text t3" x="1430" y="1045">Конец</text>
+
+  <line class="arrow" x1="800" y1="950" x2="800" y2="1045"/>
+  <text class="yesno" x="825" y="995">Да</text>
+
+  <rect class="process" x="330" y="1045" width="940" height="160"/>
+  <text class="text t2" x="800" y="1108">Определение оператора</text>
+  <text class="text t3" x="800" y="1152">Проверить наличие одного из символов:</text>
+  <text class="text t3" x="800" y="1192">+, -, *, /</text>
+
+  <line class="arrow" x1="800" y1="1205" x2="800" y2="1305"/>
+
+  <polygon class="decision" points="800,1305 1035,1425 800,1545 565,1425"/>
+  <text class="text t3" x="800" y="1415">Оператор найден?</text>
+
+  <line class="arrow" x1="1035" y1="1425" x2="1320" y2="1425"/>
+  <text class="yesno" x="1088" y="1407">Нет</text>
+  <rect class="note" x="1320" y="1355" width="220" height="140"/>
+  <text class="text t4" x="1430" y="1415">Ошибка:</text>
+  <text class="text t4" x="1430" y="1450">оператор не найден</text>
+  <line class="arrow" x1="1430" y1="1495" x2="1430" y2="1570"/>
+  <ellipse class="terminal" cx="1430" cy="1622" rx="130" ry="42"/>
+  <text class="text t3" x="1430" y="1632">Конец</text>
+
+  <line class="arrow" x1="800" y1="1545" x2="800" y2="1640"/>
+  <text class="yesno" x="825" y="1590">Да</text>
+
+  <rect class="process" x="270" y="1640" width="1060" height="180"/>
+  <text class="text t2" x="800" y="1705">Определение положения неизвестной</text>
+  <text class="text t3" x="800" y="1750">Разделить левую часть уравнения на два операнда</text>
+  <text class="text t3" x="800" y="1792">и проверить, где находится x: слева или справа от оператора</text>
+
+  <line class="arrow" x1="800" y1="1820" x2="800" y2="1910"/>
+
+  <rect class="process" x="220" y="1910" width="1160" height="210"/>
+  <text class="text t2" x="800" y="1980">Вычисление значения x</text>
+  <text class="text t4" x="800" y="2025">Если оператор "+"</text>
+  <text class="text t4" x="800" y="2060">x = result - known</text>
+  <text class="text t4" x="800" y="2095">Если оператор "-": x = result + known или known - result</text>
+  <text class="text t4" x="800" y="2130">Если оператор "*": x = result / known</text>
+  <text class="text t4" x="800" y="2165">Если оператор "/": x = result * known или known / result</text>
+
+  <line class="arrow" x1="800" y1="2120" x2="800" y2="2215"/>
+
+  <rect class="io" x="360" y="2215" width="880" height="140" rx="30"/>
+  <text class="text t2" x="800" y="2275">Вывод результата</text>
+  <text class="text t3" x="800" y="2320">Показать оператор, положение x и найденное значение переменной</text>
+
+  <line class="arrow" x1="800" y1="2355" x2="800" y2="2440"/>
+
+  <ellipse class="terminal" cx="800" cy="2500" rx="190" ry="58"/>
+  <text class="text t1" x="800" y="2513">Конец</text>
+</svg>
