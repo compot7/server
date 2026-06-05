@@ -40,36 +40,6 @@ $facts = [
         <h2><?= htmlspecialchars($greeting, ENT_QUOTES, 'UTF-8') ?></h2>
         <p>Ниже выводится серверное содержимое, сформированное во время загрузки страницы.</p>
     </section>
-
-    <section class="card">
-        <h3>Что меняется динамически</h3>
-        <ul class="feature-list">
-            <?php foreach ($facts as $index => $fact): ?>
-                <li>
-                    <span class="feature-list__badge"><?= $index + 1 ?></span>
-                    <span><?= htmlspecialchars($fact, ENT_QUOTES, 'UTF-8') ?></span>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </section>
-
-    <section class="card">
-        <h3>Параметры сервера</h3>
-        <dl class="meta-grid">
-            <div>
-                <dt>PHP version</dt>
-                <dd><?= htmlspecialchars(PHP_VERSION, ENT_QUOTES, 'UTF-8') ?></dd>
-            </div>
-            <div>
-                <dt>Server software</dt>
-                <dd><?= htmlspecialchars($_SERVER['SERVER_SOFTWARE'] ?? 'Не определено', ENT_QUOTES, 'UTF-8') ?></dd>
-            </div>
-            <div>
-                <dt>Request method</dt>
-                <dd><?= htmlspecialchars($_SERVER['REQUEST_METHOD'] ?? 'GET', ENT_QUOTES, 'UTF-8') ?></dd>
-            </div>
-        </dl>
-    </section>
 </main>
 
 <footer class="site-footer">
